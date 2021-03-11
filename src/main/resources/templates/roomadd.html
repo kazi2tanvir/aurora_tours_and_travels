@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Room Booking Form </title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/mainr.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-45 p-b-50">
+    	
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Room Add Form </h2>
+                </div>
+                <div class="card-body">
+                    <form th:action="@{/roomadd}"
+						th:object="${roomadd}" method="post">
+						<div class="form-row">
+                            <div for="roomcode" class="name"> Room Code </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{roomcode}" class="input--style-5" type="text" name="roomcode" placeholder="Example: Delux 702">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div for="roomstatus" class="name"> Room Status </div>
+                            <div class="value">
+								<div class="input-group">
+									<input class="input--style-5" type="text"  name="roomstatus"
+										th:field="*{roomstatus}" placeholder="Available">
+								</div>
+							</div>
+                        </div>
+                       
+						<div class="form-row">
+                            <div for="roomcost" class="name"> Room Cost </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{roomcost}" class="input--style-5" type="text" name="roomcost" placeholder="15000">
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="form-row">
+                            <div for="signin" class="name"> Sign-In Date </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{signin}" class="input--style-5" type="date" name="signin" placeholder="12/20/2020">
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div for="signout" class="name"> Sign-Out Date </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{signout}" class="input--style-5" type="date" name="signout" placeholder="12/22/2020">
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div for="day" class="name"> Day </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{day}" class="input--style-5" type="text" name="day" placeholder="3 days">
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="form-row">
+                            <div for="discount" class="name"> Discount </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{discount}" class="input--style-5" type="text" name="discount" placeholder="Example: 10%">
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div for="totalprice" class="name"> Total Price </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{totalprice}" class="input--style-5" type="text" name="totalprice" placeholder="15000">
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div for="paymentstatus" class="name"> Payment Status </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{paymentstatus}" class="input--style-5" type="text" name="paymentstatus" placeholder="Paid">
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div for="gueststatus" class="name"> Guest Status </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input th:field="*{gueststatus}" class="input--style-5" type="text" name="gueststatus" placeholder="Guest Status">
+                                </div>
+                            </div>
+                        </div>
+                       
+                        
+                        <div>
+                            <button class="btn btn--radius-2 btn--red buttonsize" type="submit">Confirm Booking</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

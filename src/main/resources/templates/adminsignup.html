@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="SignUp/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="SignUp/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="indexx/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="indexx/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="indexx/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="indexx/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="indexx/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="indexx/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="indexx/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="indexx/css/style.css" type="text/css">
+</head>
+<body>
+     <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form  class="register-form" th:action="@{adminsignup}"
+							th:object="${adminlogin}" method="post">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" th:field="*{name}" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" th:field="*{email}" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="userid"><i class="zmdi zmdi-email"></i></label>
+                                <input type="text" name="userid" th:field="*{userid}" placeholder="Your Phone"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" th:field="*{password}" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>
+								I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <button type="submit" class="form-submit"> Sign-Up</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="SignUp/images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="signin" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</div>
+
+    <!-- JS -->
+    <script src="SignUp/vendor/jquery/jquery.min.js"></script>
+    <script src="SignUp/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
